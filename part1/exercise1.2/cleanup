@@ -1,0 +1,7 @@
+docker ps -a
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS     NAMES
+aeb029678a49   nginx     "/docker-entrypoint.…"   16 minutes ago   Up 16 minutes   80/tcp    reverent_pasteur
+
+docker images
+REPOSITORY   TAG       IMAGE ID       CREATED      SIZE
+nginx        latest    ac232364af84   3 days ago   142MB
