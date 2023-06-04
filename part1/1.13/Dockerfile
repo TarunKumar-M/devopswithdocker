@@ -1,0 +1,22 @@
+# We need golang 1.16 Choosing golang:1.16 from Docker Hub
+FROM golang:1.16
+
+EXPOSE 8080
+
+WORKDIR /usr/src/app
+
+# Copy all of the source code
+COPY . .
+
+# Building the binary: server
+RUN go build
+
+# Run tests
+RUN go test ./...
+
+#Setup environment variables
+ENV PORT=8080
+ENV REQUEST_ORIGIN=https://example.com
+
+# Command to run the application
+CMD ["./server"]
